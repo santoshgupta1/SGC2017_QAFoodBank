@@ -5,7 +5,7 @@ Queen Anne Food Bank project repo for SeattleGiveCamp 2017
 Mobile app would allow food banks to create shopping list. And food drive users would be able to match up to a food bank and create a shopping list for their food drive.
 
 ## Platform Target
-- Apple iOS
+- iOS
 - Android
 ## Public/Private
 Public
