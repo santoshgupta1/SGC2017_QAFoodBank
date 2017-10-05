@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace QAFoodBank
 {
-    public class AboutViewModel : BaseViewModel
+    public class AboutViewModel : ViewModelBase
     {
         public AboutViewModel()
         {
