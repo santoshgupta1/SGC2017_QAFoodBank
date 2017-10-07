@@ -15,7 +15,7 @@ namespace QAFoodBank
                 case Device.iOS:
                     itemsPage = new NavigationPage(new ItemsPage())
                     {
-                        Title = "Browse"
+                        Title = "Items Needed"
                     };
 
                     aboutPage = new NavigationPage(new AboutPage())
@@ -28,7 +28,7 @@ namespace QAFoodBank
                 default:
                     itemsPage = new ItemsPage()
                     {
-                        Title = "Browse"
+                        Title = "Items Needed"
                     };
 
                     aboutPage = new AboutPage()
