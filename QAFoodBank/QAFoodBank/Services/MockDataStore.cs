@@ -8,18 +8,47 @@ namespace QAFoodBank
     public class MockDataStore : IDataStore<Item>
     {
         List<Item> items;
+        Company company;
 
         public MockDataStore()
         {
+            company = new Company();
             items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
+                new Item {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = "Soup",
+                    Description ="Any soup, small bottles.",
+                    Category = ItemCategory.Food,
+                    CompanyId = company.Id,
+                    Picture = "",
+                    Quantity ="10 lbs",
+                    Query = "soup",
+                    Priority = ItemPriority.Critical                    
+                },
+                new Item {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = "Chillies",
+                    Description ="Any chilli, small bottles.",
+                    Category = ItemCategory.Food,
+                    CompanyId = company.Id,
+                    Picture = "",
+                    Quantity ="10 lbs",
+                    Query = "chilli",
+                    Priority = ItemPriority.Critical
+                },
+                new Item {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = "Veggies",
+                    Description ="Any canned veggies, small bottles.",
+                    Category = ItemCategory.Food,
+                    CompanyId = company.Id,
+                    Picture = "",
+                    Quantity ="10 lbs",
+                    Query = "canned veggies",
+                    Priority = ItemPriority.Critical
+                }
             };
 
             foreach (var item in mockItems)
